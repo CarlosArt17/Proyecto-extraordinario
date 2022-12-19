@@ -1,16 +1,12 @@
-name: Node.js CI
-
-on:
-  push:
-    branches: [ "hotfixies" ]
-  pull_request:
-    branches: [ "hotfixies" ]
-
+name: CI Angular app through GitHub Actions
+on: 
+   push:
+      branches: ["hotfixes"]
+   pull_request:
+     branches: ["hotfixes"]
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 16.x
@@ -23,4 +19,4 @@ jobs:
 
       - name: Test
         run: |
-          npm test --no-watch --no-progress --browsers=ChromeHeadlessCI
+          npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
