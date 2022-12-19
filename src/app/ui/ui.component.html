@@ -1,0 +1,40 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<div class="contenedor1">
+    <h1>Examen extraordinario:</h1>
+    <h1>y = ax+b</h1>
+
+    <form>
+      <div class="input">
+        <span class="icon-input"><i>x</i></span>
+        <input type="text" [(ngModel)]="array" class="data-input" name="array"
+         placeholder="Ingresa el valor del array">
+        
+      </div>
+
+      <div>
+        <span class="icon-input1"><i>a</i></span>
+        <input type="number" [(ngModel)]="a"  class="data-input" name="a"
+          placeholder="Ingresa el valor de a" />
+      </div>
+
+      <div>
+        <span class="icon-input2"><i>b</i></span>
+        <input type="number" [(ngModel)]="b"  class="data-input" name="b"
+          placeholder="Ingresa el valor de b" />
+      </div>
+    </form>
+  
+    <div class="gruop-buttons">
+      <div class="button" (click)="y()">
+        <i>Calcular<Main></Main></i>
+      </div>
+    </div>
+  
+    <div id="result-box">
+      <div class="container">
+        <div class=" resultS"><span>Aqui esta tu repuesta: </span></div>
+        <div class=" result">{{Result}}</div>
+      </div>
+    </div>
+  </div>
+  
